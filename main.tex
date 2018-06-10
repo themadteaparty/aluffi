@@ -3,6 +3,9 @@
 \usepackage{fourier}
 \usepackage[english]{babel}
 
+% Hyper links
+\usepackage{hyperref}
+
 % Math packages
 \usepackage{amsmath, amsfonts, amsthm}
 \usepackage{enumitem}
@@ -141,11 +144,7 @@
   % Thick bottom horizontal rule
   \horrule{2pt} \\[0.5cm]
 }
-\author{%
-  Alexander Konovalov%
-  % Please insert your names in alphabetical order
-  % when you submit a PR.
-}
+\author{\input{authors.gen.tex}}
 % Today's date or a custom date
 \date{\normalsize\today}
 

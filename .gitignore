@@ -1,3 +1,5 @@
 *.aux
 *.log
 *.pdf
+*.out
+authors.gen.tex
