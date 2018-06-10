@@ -1,4 +1,4 @@
 all: main.pdf
 
-main.pdf:
+main.pdf: *.tex
 	pdflatex main.tex
