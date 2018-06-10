@@ -1,0 +1,158 @@
+\documentclass[paper=letter, fontsize=11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\usepackage[english]{babel}
+
+% Math packages
+\usepackage{amsmath, amsfonts, amsthm}
+\usepackage{enumitem}
+\usepackage{bussproofs}
+\usepackage{graphics, setspace}
+\usepackage{dashrule}
+
+% The mathrsfs package provides the script font.
+\usepackage{mathrsfs}
+
+\usepackage{xcolor, dot2texi, tikz}
+% The tiks-cd package provides macros for easily writing commutative diagrams.
+% For more info see [1].
+% [1]: http://ctan.math.ca/tex-archive/graphics/pgf/contrib/tikz-cd/tikz-cd-doc.pdf
+\usepackage{tikz-cd}
+
+\usetikzlibrary{shapes,arrows}
+% Allows customizing section commands
+\usepackage{sectsty}
+% Make all sections centered, the default font and small caps
+\allsectionsfont{\centering \normalfont\scshape}
+
+% Custom headers and footers
+\usepackage{fancyhdr}
+% Makes all pages in the document conform to the custom headers and footers
+\pagestyle{fancyplain}
+% No page header - if you want one, create it in the same way as the footers
+% below
+\fancyhead{}
+% Empty left footer
+\fancyfoot[L]{}
+% Empty center footer
+\fancyfoot[C]{}
+% Page numbering for right footer
+\fancyfoot[R]{\thepage}
+% Remove header underlines
+\renewcommand{\headrulewidth}{0pt}
+% Remove footer underlines
+\renewcommand{\footrulewidth}{0pt}
+% Customize the height of the header
+\setlength{\headheight}{13.6pt}
+
+% Number equations within sections
+% (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{equation}{section}
+% Number figures within sections
+% (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section}
+% Number tables within sections
+% (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section}
+
+% Removes all indentation from paragraphs - comment this line for an
+% assignment with lots of text
+\setlength\parindent{0pt}
+\setlength{\parskip}{0.5em}
+
+% Create horizontal rule command with 1 argument of height
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+% Add lcm operator.
+\DeclareMathOperator{\lcm}{lcm}
+
+% The chngcntr ("change counter") package is used here so that subsection
+% numbers are written without the leading section number. This takes place in
+% the subsection headings as well as the theorem environment numbering.
+%
+% Before:
+% 1. Section
+% 1.1. Subsection
+% Problem 1.1.1. What is 1 + 1?
+% Problem 1.1.2. What is 1 + 2?
+%
+% After:
+% 1. Section
+% 1. Subsection
+% Problem 1.1. What is 1 + 1?
+% Problem 1.2. What is 1 + 2?
+\usepackage{chngcntr}
+\counterwithout{subsection}{section}
+
+% The problem environment is a regular ams theorem environment with "Problem"
+% text and some leading space to give some separation between the problems.
+\theoremstyle{definition}
+\newtheorem{problem-internal}{Problem}[subsection]
+\newenvironment{problem}{
+  \medskip
+  \begin{problem-internal}
+}{
+  \end{problem-internal}
+}
+
+% The solution environment is a proof environment with the "solution" text as
+% well as the following adjustments:
+% - No indent on paragraphs;
+% - A small amount of space between paragraphs.
+%
+% Note: The negative space at the beginning is to remove the space before the
+% first paragraph in the solution.
+\newenvironment{solution}{
+  \begin{proof}[Solution]
+  \vspace{-8px}
+  \setlength{\parskip}{4px}
+  \setlength{\parindent}{0px}
+}{
+  \end{proof}
+}
+
+% Renewing the \thesection command changes the section numbers to roman
+% numerals. This matches the style of the Aluffi textbook.
+%
+% Before:
+% 1. Section
+% 1.1. Subsection
+%
+% After:
+% I. Section
+% I.1. Subsection
+\renewcommand{\thesection}{\Roman{section}}
+
+% Set with spacing padding for the curly braces.
+\newcommand{\set}[1]{\left\{\,#1\,\right\}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\Obj}{\mathrm{Obj}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\abs}[1]{\left|#1\right|}
+% Intuitive "from" command draws an arrow pointing left, A <- B reads "A from p"
+\newcommand{\from}{\leftarrow}
+\newcommand{\quotuniv}[1]{\overline{#1}}
+
+\title{	%	TITLE SECTION
+  % Thin top horizontal rule
+  \horrule{0.5pt} \\[0.4cm]
+  \huge Algebra 0: Solutions \\
+  % Thick bottom horizontal rule
+  \horrule{2pt} \\[0.5cm]
+}
+\author{%
+  Alexander Konovalov%
+  % Please insert your names in alphabetical order
+  % when you submit a PR.
+}
+% Today's date or a custom date
+\date{\normalsize\today}
+
+
+\begin{document}
+\maketitle % Print the title
+
+\include{chapter1.tex}
+
+\end{document}
