@@ -4,4 +4,4 @@
 
 ## How to contribute
 
-Just send a PR with your solutions and don't forget to add your name to the author list.
+Just send a PR with your solutions and don't forget to add your name to the author list (both in `main.tex` and `AUTHORS`).
