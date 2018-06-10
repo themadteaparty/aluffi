@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/themadteaparty/aluffi](https://badges.gitter.im/themadteaparty/aluffi.svg)](https://gitter.im/themadteaparty/aluffi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Errata
-The book has an unofficial [errata over here](http://faculty.fiu.edu/~yotovm/AlgStr-S12/Aluffi Ch 0 Errata.pdf).
+The book has an unofficial [errata over here](http://faculty.fiu.edu/~yotovm/AlgStr-S12/Aluffi%20Ch%200%20Errata.pdf).
 
 ## How to contribute
 
