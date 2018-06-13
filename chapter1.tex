@@ -31,6 +31,22 @@
   relation $\sim$ such that $\mathscr{P} = \mathscr{P}_{\sim}$. [\S1.5]
 \end{problem}
 
+\begin{solution}
+We think of $\mathscr{P}$ as an indexed set of subsets of $S$. Then we define 
+$a \sim b$ if and only if $a,b \in \mathscr{P}_k$. Note the following.
+
+\begin{itemize}
+    \item $a \in \mathscr{P}_k \implies a \sim a$
+    \item $a \sim b \implies a,b \in \mathscr{P}_k \implies b \sim a$
+    \item $a \sim b$ and $b \sim a \implies a,b,c \in \mathscr{P}_k \implies a \sim c$
+\end{itemize}
+
+So $\sim$ is an equivalence relation and we can speak of its equivalence 
+classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] = 
+\mathscr{P}_k$ because $a \sim b \iff a,b \in \mathscr{P}_k$. 
+\end{solution}
+
+
 % Problem 1.4
 \begin{problem}
   How many different equivalence relations can be defined on the set
