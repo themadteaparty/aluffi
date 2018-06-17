@@ -17,12 +17,32 @@
 % Problem 1.2
 \begin{problem}
   $\rhd$ Prove that if $\sim$ is an equivalence relation on a set $S$, then
-  the corresponding family $\mathscr{P}_{\sim}$ defined in \S1.5 is indeed a
+  the corresponding family $S/\sim$ defined in \S1.5 is indeed a
   partition of $S$; that is, its elements are nonempty, disjoint, and their
-  union is $S$. [\S1.5]
+  union is $S$.
 \end{problem}
 \begin{solution}
-
+  Consider the family of equivalence classes w.r.t. $\sim$ over $S$:
+  %
+  \[ S/\sim = \set{[a]_{\sim} \mid a\in S} \]
+  %
+  Let $[a]_{\sim}\in S/\sim$. Since $\sim$ is an equivalence relation,
+  by reflexivity we have $a\sim a$, so $[a]_{\sim}$ is nonempty. Now, suppose
+  $a$ and $b$ are arbitrary elements in $S$ such that $a\not\sim b$. Suppose
+  that there is an $x\in [a]_{\sim}\cap[b]_{\sim}$. This means that $x\sim a$
+  and $x\sim b$. By transitivity, we get that $a\sim b$; contradiction.
+  Hence the $[a]_{\sim}$ are disjoint. Finally, let $x\in S$. Then
+  $x\in[x]_{\sim}\in S/\sim$. This means that
+  %
+  \[ \bigcup_{[a]_{\sim} \in \mathscr{P}_{\sim}} [a]_{\sim} \supseteq S, \]
+  %
+  that is, the union of the elements of $S/\sim$ contains $S$.
+  On the other hand, $\forall x \in [a]_\sim, x \in S$ by the definition
+  of $[a]_\sim$, and therefore:
+  %
+  \[ \bigcup_{[a]_{\sim} \in \mathscr{P}_{\sim}} [a]_{\sim} \subseteq S, \]
+  %
+  And we conclude that the two sets must be equal.
 \end{solution}
 
 % Problem 1.3
