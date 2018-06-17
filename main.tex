@@ -84,6 +84,10 @@
 % 1. Subsection
 % Problem 1.1. What is 1 + 1?
 % Problem 1.2. What is 1 + 2?
+% (these `\let`s are to work around a "Command \counterwithout already defined"
+% for those of us with inferior LaTeX setups)
+\let\counterwithout\relax
+\let\counterwithin\relax
 \usepackage{chngcntr}
 \counterwithout{subsection}{section}
 
