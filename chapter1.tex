@@ -4,7 +4,7 @@
 
 % Problem 1.1
 \begin{problem}
-  Locate a discussion of Russell's paradox, and understand it.
+  Locate a discussion of Russel's paradox, and understand it.
 \end{problem}
 \begin{solution}
   Russell's Paradox arises within naive set theory when considering the set
@@ -95,49 +95,49 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   you answer the first one.)
 \end{problem}
 \begin{solution}
-  For $a,b\in \mathbf{Z}$, define $a\diamond b$ to be true if and only if
+  For $a,b\in \mathbb{Z}$, define $a\diamond b$ to be true if and only if
   $\abs{a-b} \leq 1$. It is reflexive, since $a\diamond a = \abs{a-a} = 0 \leq
-  1$ for any $a\in \mathbf{Z}$, and it is symmetric since $a\diamond b =
-  \abs{a-b} = \abs{b-a} = b\diamond a$ for any $a,b\in \mathbf{Z}$. However,
+  1$ for any $a\in \mathbb{Z}$, and it is symmetric since $a\diamond b =
+  \abs{a-b} = \abs{b-a} = b\diamond a$ for any $a,b\in \mathbb{Z}$. However,
   it is not transitive. Take for example $a=0, b=1, c=2$.  Then we have
   $\abs{a-b} = 1\leq 1$, and $\abs{b-c} = 1\leq 1$, but $\abs{a-c} = 2 > 1$;
   so $a\diamond b$ and $b\diamond c$, but not $a\diamond c$.
 
-  When we try to build a partition of $\mathbf{Z}$ using $\diamond$, we get
+  When we try to build a partition of $\mathbb{Z}$ using $\diamond$, we get
   "equivalence classes" that are not disjoint. For example, $[2]_{\diamond} =
   \{1,2,3\}$, but $[3]_{\diamond} = \{2,3,4\}$. Hence $\mathscr{P}_{\diamond}$
-  is not a partition of $\mathbf{Z}$.
+  is not a partition of $\mathbb{Z}$.
 \end{solution}
 
 % Problem 1.6
 \begin{problem}
-  Define a relation $\sim$ on the set $\mathbf{R}$ of real numbers by
-  setting $a\sim b\iff b-a\in\mathbf{Z}$. Prove that this is an equivalence
-  relation, and find a `compelling' description for $\mathbf{R}\,/\!\sim$.
-  Do the same for the relation $\approx$ on the plane $\mathbf{R}\times
-  \mathbf{R}$ by declaring $(a_1,b_1)\approx(a_2,b_2)\iff
-  b_1-a_1\in\mathbf{Z}$ and $b_2-a_2\in\mathbf{Z}$. [\S II.8.1, II.8.10]
+  Define a relation $\sim$ on the set $\mathbb{R}$ of real numbers by
+  setting $a\sim b\iff b-a\in\mathbb{Z}$. Prove that this is an equivalence
+  relation, and find a `compelling' description for $\mathbb{R}\,/\!\sim$.
+  Do the same for the relation $\approx$ on the plane $\mathbb{R}\times
+  \mathbb{R}$ by declaring $(a_1,b_1)\approx(a_2,b_2)\iff
+  b_1-a_1\in\mathbb{Z}$ and $b_2-a_2\in\mathbb{Z}$. [\S II.8.1, II.8.10]
 \end{problem}
 \begin{solution}
-  Suppose $a,b,c\in\mathbf{R}$. We have that $a-a=0\in\mathbf{Z}$, so $\sim$
-  is reflexive. If $a\sim b$, then $b-a=k$ for some $k\in\mathbf{Z}$, so
-  $a-b=-k\in\mathbf{Z}$, hence $b\sim a$. So $\sim$ is symmetric. Now, suppose that $a\sim b$ and $b\sim c$, in particular that $b-a=k\in\mathbf{Z}$ and
-  $c-b=l\in\mathbf{Z}$. Then $c-a=(c-b) + (b-a) = l+k\in\mathbf{Z}$, so
+  Suppose $a,b,c\in\mathbb{R}$. We have that $a-a=0\in\mathbb{Z}$, so $\sim$
+  is reflexive. If $a\sim b$, then $b-a=k$ for some $k\in\mathbb{Z}$, so
+  $a-b=-k\in\mathbb{Z}$, hence $b\sim a$. So $\sim$ is symmetric. Now, suppose that $a\sim b$ and $b\sim c$, in particular that $b-a=k\in\mathbb{Z}$ and
+  $c-b=l\in\mathbb{Z}$. Then $c-a=(c-b) + (b-a) = l+k\in\mathbb{Z}$, so
   $a\sim c$. So $\sim$ is transitive.
 
   Doing the same component-wise on for the relation $\approx$ on the plane
-  $\mathbf{R}\times \mathbf{R}$ is trivial.
+  $\mathbb{R}\times \mathbb{R}$ is trivial.
 
-  An equivalence class $[a]_{\sim}\in\mathbf{R}\,/\!\sim$ is the set of
-  integers $\mathbf{Z}$ transposed by some real number $\epsilon\in[0,1)$. That is, for every set $X\in\mathbf{R}\,/\!\sim$, there is a real number
+  An equivalence class $[a]_{\sim}\in\mathbb{R}\,/\!\sim$ is the set of
+  integers $\mathbb{Z}$ transposed by some real number $\epsilon\in[0,1)$. That is, for every set $X\in\mathbb{R}\,/\!\sim$, there is a real number
   $\epsilon\in[0,1)$ such that every $x\in X$ is of the form $k+\epsilon$ for some integer $k$.
 
-  If we map each $x\in\mathbf{R}$ onto a circle using $\varphi=2\pi x$, then
-  each equivalence class $[a]_{\sim}\in\mathbf{R}\,/\!\sim$ will correspond to
+  If we map each $x\in\mathbb{R}$ onto a circle using $\varphi=2\pi x$, then
+  each equivalence class $[a]_{\sim}\in\mathbb{R}\,/\!\sim$ will correspond to
   a single point on its circumference.
 
   The interpretation of $\approx$ is similar to $\sim$. An equivalence class
-  $X\in\mathbf{R}\times\mathbf{R}\,/\approx$ is just the 2-dimensional integer lattice $\mathbf{Z}\times\mathbf{Z}$ transposed by some pair of values $(\epsilon_1,\epsilon_2)\in[0,1)\times[0,1)$. $X$ can be visualized as a point
+  $X\in\mathbb{R}\times\mathbb{R}\,/\approx$ is just the 2-dimensional integer lattice $\mathbb{Z}\times\mathbb{Z}$ transposed by some pair of values $(\epsilon_1,\epsilon_2)\in[0,1)\times[0,1)$. $X$ can be visualized as a point
   on a torus.
 \end{solution}
 
@@ -237,7 +237,7 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
 % Problem 2.8.
 \begin{problem}
   Describe as explicitly as you can all terms in the canonical decomposition
-  (cf. \S2.8) of the function $\mathbf{R}\to\mathbf{C}$ defined by $r\mapsto
+  (cf. \S2.8) of the function $\mathbb{R}\to\mathbb{C}$ defined by $r\mapsto
   e^{2\pi ir}$. (This exercise matches one previously. Which one?)
 \end{problem}
 
@@ -298,7 +298,7 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
 % Problem 3.4
 \begin{problem}
   Can we define a category in the style of Example 3.3 using the relation
-  $<$ on the set $\mathbf{Z}$?
+  $<$ on the set $\mathbb{Z}$?
 \end{problem}
 
 % Problem 3.5
@@ -310,9 +310,9 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
 % Problem 3.6
 \begin{problem}
   $\rhd$ (Assuming some familiarity with linear algebra.) Define a category
-  $\mathsf{V}$ by taking $\Obj(\mathsf{V}) = \mathbf{N}$ and letting
+  $\mathsf{V}$ by taking $\Obj(\mathsf{V}) = \mathbb{N}$ and letting
   $\Hom_{\mathsf{V}}(m,n) = $ the set of $m\times n$ matrices with real
-  entries, for all $m,n\in\mathbf{N}$. (We will leave the reader the task of
+  entries, for all $m,n\in\mathbb{N}$. (We will leave the reader the task of
   making sense of a matrix with 0 rows or columns.) Use product of matrices
   to define composition. Does this category `feel' familiar?
   [\S VI.2.1, \S VIII.1.3]
@@ -475,7 +475,7 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
 % Problem 5.5
 \begin{problem}
   Consider the category corresponding to endowing (as in Example 3.3) the set
-  $\mathbf{Z}^+$ of positive integers with the divisibility relation. Thus
+  $\mathbb{Z}^+$ of positive integers with the divisibility relation. Thus
   there is exactly one morphism $d\to m$ in this category if and only if $d$
   divides $m$ without remainder; there is no morphism between $d$ and $m$
   otherwise. Show that this category has products and coproducts. What are
