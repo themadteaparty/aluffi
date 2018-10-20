@@ -206,6 +206,27 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   Prove that the inverse of a bijection is a bijection and that the
   composition of two bijections is a bijection.
 \end{problem}
+\begin{solution}
+  The inverse of a bijection $f^{-1}$ has both a right and a left
+  inverses, both are $f : A \to B$ itself. According to proposition 2.1,
+  if $A\neq\emptyset$, then this is equivalent to $f^{-1}$ being a bijection.
+
+  If $A=\emptyset$ and $f^{-1}$ is a function, then $f^{-1}$ is a left-total
+  relation, meaning that $\forall b \in B. \exists a \in A. f^{-1}(b) = a$.
+  Suppose that $B$ is non-empty, then it follows that $A$ must be non-empty,
+  contradiction. If both $A$ and $B$ are empty, then any function between them
+  is a bijection.
+
+  In proposition 2.1, we showed that a function is a bijection if and only if
+  it has both a left and a right inverse. Since $f_l^{-1} =
+  f_l^{-1} \circ f \circ f_r^{-1} = f_r^{-1}$, both left and right inverse must
+  coincide if they exist. This means that a function is a bijection if and only
+  if it has an inverse.
+
+  The composition of two bijections is invertible since $(f \circ g) \circ
+  (g^{-1} \circ f^{-1}) = f \circ (g \circ g^{-1}) \circ f^{-1} = id$ and
+  similarly for composition on the left. Therefore $f \circ g$ is a bijection.
+\end{solution}
 
 % Problem 2.4
 \begin{problem}
