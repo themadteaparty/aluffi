@@ -249,6 +249,36 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   of the notion of \textit{monomorphism} seen in \S 2.6, and prove a result
   analogous to Proposition 2.3, for epimorphisms and surjections.
 \end{problem}
+\begin{solution}
+  A function $f: A \to B$ is an {\em epimorphism} (or {\em epic}) if
+  the following holds:
+  \begin{center}
+    {\em for all sets Z and all functions $\alpha', \alpha'': B \to Z$ \\
+     $\alpha' \circ f = \alpha'' \circ f \Longrightarrow \alpha' = \alpha''$}
+  \end{center}
+
+  A function $f$ is surjective if and only if it is an epimorphism.
+
+  ($\implies$) Suppose that $f$ is surjective, then it has a right
+  inverse $f^{-1}$. If for some functions $\alpha', \alpha'': Z \to A$,
+  $\alpha' \circ f = \alpha'' \circ f$, then
+  \begin{align*}
+    \alpha' \circ f \circ f^{-1} &= \alpha'' \circ f \circ f^{-1} \\
+    \alpha' &= \alpha'' \\
+  \end{align*}
+  Therefore $f$ is an epimorphism.
+
+  ($\impliedby$) Suppose that $f$ is an epimorphism, and we need to prove that
+  it is surjective, $\forall b \in B~\exists a \in A.~f(a) = b$.
+  Fix some $b \in B$. Let $Z=\{0, 1\}$, and let $\alpha'$ map all elements of
+  $B$ to $0$ and $\alpha''$ map all elements of $B\setminus \{b\}$ to $0$ and
+  $b$ to $1$. Since $\alpha' \circ f = \alpha'' \circ f$ implies
+  $\alpha' = \alpha''$ and $\alpha' \neq \alpha''$, it must be the case that
+  $\alpha' \circ f \neq \alpha'' \circ f$, so there exists some $a \in A$ such
+  that $\alpha'(f(a)) \neq \alpha''(f(a))$. By the definition of $\alpha'$ and
+  $\alpha''$, $f(a)$ must be equal to $b$ since both functions are equal on all
+  other points of the set $B$.
+\end{solution}
 
 % Problem 2.6
 \begin{problem}
@@ -261,6 +291,11 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   Let $f:A\to B$ be any function. Prove that the graph $\Gamma_f$ of $f$ is
   isomorphic to $A$.
 \end{problem}
+\begin{solution}
+  We can map $\Gamma_f$ to $A$ using $f: \langle a, f(a)\rangle \mapsto a$ and
+  $f^{-1}: a \mapsto \langle a, f(a) \rangle$. These two functions form
+  an isomorphism since both $f \circ f^{-1}$ and $f^{-1} \circ f$ are identities.
+\end{solution}
 
 % Problem 2.8.
 \begin{problem}
@@ -268,6 +303,16 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   (cf. \S2.8) of the function $\mathbb{R}\to\mathbb{C}$ defined by $r\mapsto
   e^{2\pi ir}$. (This exercise matches one previously. Which one?)
 \end{problem}
+\begin{solution}
+  Let $x \sim y$ if and only if $\abs{x-y} \in \mathbb{Z}$ or in other words,
+  $e^{2\pi ix} = e^{2\pi iy}$. Then $\mathbb{R}/\sim$ is isomorphic to a set
+  $S = [0, 2\pi)$, and we will use elements of the set $S$ to identify
+  partitions in $\mathbb{R}/\sim$. The canonical projection maps every
+  $x \in \mathbb{R}$ to some $[y]_{\sim}$ such that $y \in S$ and
+  $\abs{x-y} = 2 \pi n$ for some $n \in Z$. The bijection $\tilde{f}$ maps $S$ to
+  a unit circle $U \subset \mathbb{C}$, and the final injection
+  $U \to \mathbb{C}$ is just an identity function.
+\end{solution}
 
 % Problem 2.9
 \begin{problem}
@@ -282,6 +327,13 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   $\rhd$ Show that if $A$ and $B$ are finite sets, then $\abs{B^A} =
   \abs{B}^{\abs{A}}$. [\S2.1, 2.11, I.4.1]
 \end{problem}
+\begin{solution}
+  A function $f \in A \to B = B^A$ maps each element of $a \in A$ to
+  an element $f(a) \in B$. If $A$ is finite, then such function can be
+  isomorphically represented as a product $\langle f(a_1), f(a_2), \ldots,
+  f(a_n)\rangle \in \prod_{a\in A} B$. Therefore $\abs{B^A} =
+  \abs{\prod_{a\in A} B} = \prod_{a\in A}\abs{B} = \abs{B}^{\abs{A}}$.
+\end{solution}
 
 % Problem 2.11
 \begin{problem}
