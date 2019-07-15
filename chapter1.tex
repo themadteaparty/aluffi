@@ -212,6 +212,15 @@ classes. If we let $a \in \mathscr{P}_k$, then it follows that $[a] =
   $\rhd$ Prove that `isomorphism' is an equivalence relation (on any set
   of sets.) [\S4.1]
 \end{problem}
+\begin{solution}
+  By definition of an isomorphism between sets, $A \cong B \iff \exists f : A \leftrightarrow B$.
+
+  \begin{enumerate}
+    \item Reflexivity: for every set $A$, there is an identity function $id_A : A \leftrightarrow A$, bijectively mapping the set to itself. Therefore $A \cong B$.
+    \item Symmetry: if $A \cong B$, there is some bijective $f: A \leftrightarrow B$. Then $f^{-1}: B \leftrightarrow A$, and therefore $B \cong A$.
+    \item Transitivity: if $A \cong B$ and $B \cong C$, there is a bijective $f: A \leftrightarrow B$ and a bijective $g: B \leftrightarrow C$. Since bijections compose, $g \circ f : A \leftrightarrow C$, and therefore $A \cong C$.
+  \end{enumerate}
+\end{solution}
 
 % Problem 2.5
 \begin{problem}
