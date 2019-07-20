@@ -2,4 +2,6 @@
 *.log
 *.pdf
 *.out
+*.bbl
+*.blg
 authors.gen.tex
